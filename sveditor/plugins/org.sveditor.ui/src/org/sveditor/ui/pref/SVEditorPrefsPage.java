@@ -38,6 +38,11 @@ public class SVEditorPrefsPage extends FieldEditorPreferencePage implements IWor
 		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_KEYWORD_C, "Key&word color:", SVEditorPrefsConstants.P_KEYWORD_S, getFieldEditorParent()));
 		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_NUMBERS_C, "N&umber color:", SVEditorPrefsConstants.P_NUMBERS_S, getFieldEditorParent()));
 		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_OPERATORS_C, "&Operator color:", SVEditorPrefsConstants.P_OPERATORS_S, getFieldEditorParent()));
+		addField( new BooleanFieldEditor(SVEditorPrefsConstants.P_PORT_HIGHLIGHT_ENABLED, "&Highlight module ports and parameters:", getFieldEditorParent()));
+		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_PORT_INPUT_C, "In&put port color:", SVEditorPrefsConstants.P_PORT_INPUT_S, getFieldEditorParent()));
+		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_PORT_OUTPUT_C, "Ou&tput port color:", SVEditorPrefsConstants.P_PORT_OUTPUT_S, getFieldEditorParent()));
+		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_PORT_INOUT_C, "I&nout port color:", SVEditorPrefsConstants.P_PORT_INOUT_S, getFieldEditorParent()));
+		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_PARAMETER_C, "Par&ameter color:", SVEditorPrefsConstants.P_PARAMETER_S, getFieldEditorParent()));
 		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_SVT_PARAMETERS_S, "S&VT Template Parameter color:", 
 				SVEditorPrefsConstants.P_SVT_PARAMETERS_S, getFieldEditorParent()));
 		addField( new ColorStyleFieldEditor(SVEditorPrefsConstants.P_BRACE_C  , "B&racket color:", SVEditorPrefsConstants.P_BRACE_S, getFieldEditorParent()));

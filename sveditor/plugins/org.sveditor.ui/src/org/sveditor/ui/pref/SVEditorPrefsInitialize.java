@@ -54,13 +54,17 @@ public class SVEditorPrefsInitialize extends AbstractPreferenceInitializer {
 		
 		// Colorizer colors
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_DEFAULT_C, new RGB(0, 0, 0));
-		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_COMMENT_C, new RGB(0, 128, 0));
+		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_COMMENT_C, new RGB(105, 105, 105));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_STRING_C, new RGB(42, 0, 255));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_KEYWORD_C, new RGB(128, 0, 64));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_BRACE_C  , new RGB(0, 0, 0));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_MATCHING_BRACE_C, new RGB(170, 170, 170));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_NUMBERS_C, new RGB(0, 0, 0));
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_OPERATORS_C, new RGB(0, 0, 0));
+		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_PORT_INPUT_C, new RGB(0, 128, 138));
+		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_PORT_OUTPUT_C, new RGB(194, 94, 0));
+		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_PORT_INOUT_C, new RGB(122, 61, 184));
+		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_PARAMETER_C, new RGB(0, 100, 0));
 		
 		PreferenceConverter.setDefault(store, SVEditorPrefsConstants.P_CONTENT_ASSIST_HOVER_BG_COLOR, 
 				new RGB(0xFF,0xFF,0xE1));
@@ -75,6 +79,11 @@ public class SVEditorPrefsInitialize extends AbstractPreferenceInitializer {
 		store.setDefault(SVEditorPrefsConstants.P_BRACE_S  , SWT.NORMAL);
 		store.setDefault(SVEditorPrefsConstants.P_NUMBERS_S, SWT.NORMAL);
 		store.setDefault(SVEditorPrefsConstants.P_OPERATORS_S, SWT.NORMAL);
+		store.setDefault(SVEditorPrefsConstants.P_PORT_INPUT_S, SWT.BOLD);
+		store.setDefault(SVEditorPrefsConstants.P_PORT_OUTPUT_S, SWT.BOLD);
+		store.setDefault(SVEditorPrefsConstants.P_PORT_INOUT_S, SWT.NORMAL);
+		store.setDefault(SVEditorPrefsConstants.P_PARAMETER_S, SWT.BOLD);
+		store.setDefault(SVEditorPrefsConstants.P_PORT_HIGHLIGHT_ENABLED, true);
 		PreferenceConverter.setDefault(store,  SVEditorPrefsConstants.P_SVT_PARAMETERS_S, 
 				new RGB(225, 20, 225));
 		

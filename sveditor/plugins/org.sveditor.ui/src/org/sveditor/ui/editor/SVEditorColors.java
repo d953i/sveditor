@@ -36,7 +36,11 @@ public enum SVEditorColors {
 	MATCHING_BRACE,
 	NUMBERS,
 	OPERATORS,
-	SVT_PARAMETERS;
+	SVT_PARAMETERS,
+	PORT_INPUT,
+	PORT_OUTPUT,
+	PORT_INOUT,
+	PARAMETER;
 
 	private static Map<SVEditorColors, String>              fColorMap;
 	private static Map<SVEditorColors, String>              fStyleMap;
@@ -56,6 +60,10 @@ public enum SVEditorColors {
 		fColorMap.put(NUMBERS, SVEditorPrefsConstants.P_NUMBERS_C);
 		fColorMap.put(OPERATORS, SVEditorPrefsConstants.P_OPERATORS_C);
 		fColorMap.put(SVT_PARAMETERS, SVEditorPrefsConstants.P_SVT_PARAMETERS_S);
+		fColorMap.put(PORT_INPUT, SVEditorPrefsConstants.P_PORT_INPUT_C);
+		fColorMap.put(PORT_OUTPUT, SVEditorPrefsConstants.P_PORT_OUTPUT_C);
+		fColorMap.put(PORT_INOUT, SVEditorPrefsConstants.P_PORT_INOUT_C);
+		fColorMap.put(PARAMETER, SVEditorPrefsConstants.P_PARAMETER_C);
 		
 		fStyleMap.put(DEFAULT, SVEditorPrefsConstants.P_DEFAULT_S);
 		fStyleMap.put(STRING, SVEditorPrefsConstants.P_STRING_S);
@@ -66,6 +74,10 @@ public enum SVEditorColors {
 		fStyleMap.put(NUMBERS, SVEditorPrefsConstants.P_NUMBERS_S);
 		fStyleMap.put(OPERATORS, SVEditorPrefsConstants.P_OPERATORS_S);
 		fStyleMap.put(SVT_PARAMETERS, SVEditorPrefsConstants.P_SVT_PARAMETERS_S);
+		fStyleMap.put(PORT_INPUT, SVEditorPrefsConstants.P_PORT_INPUT_S);
+		fStyleMap.put(PORT_OUTPUT, SVEditorPrefsConstants.P_PORT_OUTPUT_S);
+		fStyleMap.put(PORT_INOUT, SVEditorPrefsConstants.P_PORT_INOUT_S);
+		fStyleMap.put(PARAMETER, SVEditorPrefsConstants.P_PARAMETER_S);
 	}
 
 	static IPreferenceStore fPrefStore = SVUiPlugin.getDefault().getPreferenceStore();

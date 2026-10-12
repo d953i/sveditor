@@ -185,6 +185,7 @@ public class SVEditor extends TextEditor
 	private SVHighlightingManager			fHighlightManager;
 	private SVCodeScanner					fCodeScanner;
 	private MatchingCharacterPainter		fMatchingCharacterPainter;
+	private SVPortHighlighter				fPortHighlighter;
 	private SVCharacterPairMatcher			fCharacterMatcher;
 	
 	// Holds the current parsed AST view of the file
@@ -346,6 +347,9 @@ public class SVEditor extends TextEditor
 				applyUnprocessedRegions(fSVDBFilePP);
 				applyFolding(fSVDBFile, fSVDBFilePP);
 				applyOverrideAnnotations(fSVDBFile);
+				if (fPortHighlighter != null) {
+					fPortHighlighter.update(fSVDBFile);
+				}
 			} else {
 				fLog.debug(LEVEL_MAX, "-- UpdateSVDBFile.new_in==null");
 			}
@@ -1131,6 +1135,10 @@ public class SVEditor extends TextEditor
 			fCharacterMatcher.dispose();
 			fCharacterMatcher = null;
 		}
+		if (fPortHighlighter != null) {
+			fPortHighlighter.uninstall();
+			fPortHighlighter = null;
+		}
 
 		if (getSelectionProvider() != null) {
 			getSelectionProvider().removeSelectionChangedListener(selectionChangedListener);
@@ -1190,6 +1198,13 @@ public class SVEditor extends TextEditor
 				((ITextViewerExtension2)getSourceViewer()).addPainter(
 						fMatchingCharacterPainter);
 			}
+		}
+		
+		// Highlight references to module ports
+		if (fPortHighlighter == null) {
+			fPortHighlighter = new SVPortHighlighter(getSourceViewer());
+			fPortHighlighter.install();
+			fPortHighlighter.update(fSVDBFile);
 		}
 		
 		getSourceViewer().getSelectionProvider().addSelectionChangedListener(selectionChangedListener);
@@ -1922,6 +1937,9 @@ public class SVEditor extends TextEditor
 			public void propertyChange(PropertyChangeEvent event) {
 				SVColorManager.clear();
 				getCodeScanner().updateRules(fContentType);
+				if (fPortHighlighter != null) {
+					fPortHighlighter.refresh();
+				}
 				if (getSourceViewer() != null && getSourceViewer().getTextWidget() != null) {
 					getSourceViewer().getTextWidget().redraw();
 					getSourceViewer().getTextWidget().update();

@@ -35,6 +35,10 @@ public class SVEditorPrefsConstants {
 	public static final String P_MATCHING_BRACE_C								= EDIT_SETTINGS + "matchingBraceColorPreference";
 	public static final String P_NUMBERS_C 										= EDIT_SETTINGS + "numbersColorPreference";
 	public static final String P_OPERATORS_C									= EDIT_SETTINGS + "operatorsColorPreference";
+	public static final String P_PORT_INPUT_C									= EDIT_SETTINGS + "portInputColorPreference";
+	public static final String P_PORT_OUTPUT_C									= EDIT_SETTINGS + "portOutputColorPreference";
+	public static final String P_PORT_INOUT_C									= EDIT_SETTINGS + "portInoutColorPreference";
+	public static final String P_PARAMETER_C									= EDIT_SETTINGS + "parameterColorPreference";
 	
 	public static final String P_DEFAULT_S 										= EDIT_SETTINGS + "defaultStylePreference";
 	public static final String P_KEYWORD_S 										= EDIT_SETTINGS + "keywordStylePreference";
@@ -43,6 +47,11 @@ public class SVEditorPrefsConstants {
 	public static final String P_BRACE_S 										= EDIT_SETTINGS + "braceStylePreference";
 	public static final String P_NUMBERS_S										= EDIT_SETTINGS + "numbersStylePreference";
 	public static final String P_OPERATORS_S									= EDIT_SETTINGS + "operatorsStylePreference";
+	public static final String P_PORT_INPUT_S									= EDIT_SETTINGS + "portInputStylePreference";
+	public static final String P_PORT_OUTPUT_S									= EDIT_SETTINGS + "portOutputStylePreference";
+	public static final String P_PORT_INOUT_S									= EDIT_SETTINGS + "portInoutStylePreference";
+	public static final String P_PARAMETER_S									= EDIT_SETTINGS + "parameterStylePreference";
+	public static final String P_PORT_HIGHLIGHT_ENABLED							= EDIT_SETTINGS + "portHighlightEnabled";
 	
 	public static final String P_SVT_PARAMETERS_S								= EDIT_SETTINGS + "svtParametersStylePreference";
 	

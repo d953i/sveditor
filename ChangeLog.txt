@@ -1,5 +1,17 @@
 
 ------------------------------------------------------------------------------
+-- 2.1.8 Release --
+
+- #(enh) - Highlight module/interface/program ports by direction (input,
+           output, inout) and parameters/localparams, each with a
+           configurable color and style (Preferences > SVEditor)
+- #(enh) - Comments default to dark grey
+- #(bug) - Fix NullPointerException in SVDocumentTextScannerBase.get_ch when
+           opening an editor whose document already has another plug-in's
+           partitioning (eg CDT)
+- #(nobug) - Build for Eclipse 2026-09 (4.41) with Tycho 5, Java 21
+
+------------------------------------------------------------------------------
 -- 2.1.7 Release --
 
 - #(nobug) - Migrate to Maven-based build
