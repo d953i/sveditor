@@ -23,7 +23,7 @@ import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IRegion;
 import org.eclipse.jface.text.TextUtilities;
 
-import com.ibm.icu.text.BreakIterator;
+import java.text.BreakIterator;
 
 
 /**

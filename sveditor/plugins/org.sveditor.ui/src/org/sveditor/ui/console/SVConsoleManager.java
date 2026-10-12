@@ -35,7 +35,7 @@ import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.IConsoleManager;
 
-import com.ibm.icu.text.MessageFormat;
+import java.text.MessageFormat;
 
 public class SVConsoleManager {
 	private static SVConsoleManager			fDefault;

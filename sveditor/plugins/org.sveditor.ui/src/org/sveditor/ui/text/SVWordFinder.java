@@ -15,7 +15,6 @@
 package org.sveditor.ui.text;
 
 
-import com.ibm.icu.text.UTF16;
 
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.IDocument;
@@ -37,7 +36,7 @@ public class SVWordFinder {
 				c= document.getChar(pos);
 				if (!Character.isJavaIdentifierPart(c)) {
 					// Check for surrogates
-					if (UTF16.isSurrogate(c)) {
+					if (Character.isSurrogate(c)) {
 						/*
 						 * XXX: Here we should create the code point and test whether
 						 * it is a Java identifier part. Currently this is not possible
@@ -59,7 +58,7 @@ public class SVWordFinder {
 			while (pos < length) {
 				c= document.getChar(pos);
 				if (!Character.isJavaIdentifierPart(c)) {
-					if (UTF16.isSurrogate(c)) {
+					if (Character.isSurrogate(c)) {
 						/*
 						 * XXX: Here we should create the code point and test whether
 						 * it is a Java identifier part. Currently this is not possible

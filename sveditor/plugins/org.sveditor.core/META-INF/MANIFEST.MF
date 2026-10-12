@@ -74,5 +74,5 @@ Export-Package: org.sveditor.core,
  org.sveditor.core.tagproc,
  org.sveditor.core.utils,
  org.sveditor.core.vhdl.parser
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 

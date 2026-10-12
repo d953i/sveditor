@@ -466,10 +466,12 @@ public class SVEditor extends TextEditor
 		 * Tools, such as the EGit plug-in, can request that a specific 
 		 * editor be opened, but provide a filename that results in the
 		 * default partitioner not being applied.
+		 * Other plug-ins (eg CDT) may also have attached their own
+		 * partitioning, so check for the SV partitioning specifically.
 		 */
 		if (getDocument() instanceof IDocumentExtension3) {
 			IDocumentExtension3 docExt = (IDocumentExtension3)getDocument();
-			if (docExt.getPartitionings() == null || docExt.getPartitionings().length == 0) {
+			if (docExt.getDocumentPartitioner(SVDocumentPartitions.SV_PARTITIONING) == null) {
 				IDocumentPartitioner p = SVDocumentSetupParticipant.createPartitioner();
 				docExt.setDocumentPartitioner(SVDocumentPartitions.SV_PARTITIONING, p);
 				p.connect((IDocument)docExt);

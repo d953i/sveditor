@@ -24,10 +24,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.forms,
  org.eclipse.zest.core,
  org.eclipse.zest.layouts,
- org.eclipse.draw2d,
- com.ibm.icu
+ org.eclipse.draw2d
 Eclipse-LazyStart: true
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.sveditor.ui,
  org.sveditor.ui.console,
  org.sveditor.ui.doc,

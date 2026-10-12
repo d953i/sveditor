@@ -133,7 +133,8 @@ public class SVDocumentTextScannerBase
 							r = ext3.getPartition(fDocPartition, fIdx, false);
 						} catch (BadPartitioningException e) {}
 								
-						if (!fSkipComments || (r != null && !isCommentPartition(r))) {
+						// No partition info (eg partitioner not connected): treat as code
+						if (!fSkipComments || r == null || !isCommentPartition(r)) {
 							ch = fDoc.getChar(fIdx);
 							fIdx++;
 							break;
@@ -174,7 +175,8 @@ public class SVDocumentTextScannerBase
 							break;
 						}
 						
-						if (!fSkipComments || (r != null && !isCommentPartition(r))) {
+						// No partition info (eg partitioner not connected): treat as code
+						if (!fSkipComments || r == null || !isCommentPartition(r)) {
 							if (fIdx >= fDoc.getLength()) {
 								fIdx = fDoc.getLength()-1;
 							}

@@ -51,7 +51,7 @@ import org.eclipse.ui.console.IHyperlink;
 import org.eclipse.ui.console.IOConsole;
 import org.eclipse.ui.console.IOConsoleOutputStream;
 
-import com.ibm.icu.text.MessageFormat;
+import java.text.MessageFormat;
 
 public class SVConsole extends IOConsole implements IConsole {
 
